@@ -19,3 +19,25 @@ function quadradoVermelho(){
     quadradoVermelho.style.backgroundColor = 'white';
 }
 quadradoVermelho()
+
+// 4 questao
+function corrigiText(){
+    let corrigiText = document.getElementsByTagName('h1')[0];
+    corrigiText.innerText = 'Exercício 5.1 - JavaScript';
+}
+corrigiText();
+// 5 questao
+function textoMai(){
+    let textoMai = document.getElementsByTagName('p')[0];
+    textoMai.innerHTML = textoMai.innerHTML.toUpperCase();
+}
+textoMai();
+
+// 6 questao
+function botarNavegador(){
+    let paragrafo3 = document.getElementsByTagName('p');
+    for (let index = 0; index < paragrafo3.length; index += 1 ){
+        console.log(paragrafo3[index].innerHTML); 
+    }
+}
+botarNavegador();
