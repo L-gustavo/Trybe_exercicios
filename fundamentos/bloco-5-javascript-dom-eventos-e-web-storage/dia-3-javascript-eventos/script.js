@@ -102,4 +102,27 @@ function voltaSizeDay(event){
   event.target.style.fontSize = '20px'
 }
 
-// 7 questao
+// 7 questao fazer uma tarefa personalizada no calendário/ criar uma <span>
+// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks"
+
+function tarefaDia(projeto){
+  let span = document.createElement('span');
+  span.innerHTML = projeto
+  let divElement = document.querySelector('.my-tasks')
+  divElement.appendChild(span)
+}
+
+tarefaDia('projeto')
+
+// 8 questao 
+
+function adicionaCor(cor){
+  let classElement = document.querySelector('.my-tasks')
+  let div = document.createElement('div');
+  div.innerHTML = "dia 13"
+  div.className = 'task';
+  div.style.backgrounColor = cor;
+  classElement.appendChild(div)
+}
+
+adicionaCor('blue')
