@@ -33,13 +33,57 @@ function createDaysOfTheWeek() {
     }
   }
   // 2 questão criar uma função e add um botão
-
+  let buttonContainer = document.querySelector('.buttons-container')
+  
   function createButton(buttonNome){
-    let buttonContainer = document.querySelector('.buttons-container')
-    let botão = document.createElement('button');
-    botão.innerText = buttonNome
-    botão.id = 'btn-holiday'
-    buttonContainer.appendChild(botão)
+    let botao = document.createElement('button');
+    botao.innerText = buttonNome
+    botao.id = 'btn-holiday'
+    buttonContainer.appendChild(botao)
   }
 
 createButton('Feriados')
+
+  // 3 questao fazer com que o botão mude de cor ao ser clicado e ao 
+  // ser clicado novamente voltar ao normal
+  let botao = document.querySelector('#btn-holiday')
+  botao.addEventListener('click', function(){
+  let mudaCor = document.querySelectorAll('.holiday');
+  for( let index = 0; index < mudaCor.length; index += 1){
+    if(mudaCor[index].style.backgroundColor === 'black'){
+      mudaCor[index].style.backgroundColor = "rgb(238,238,238)"
+    } else {
+      mudaCor[index].style.backgroundColor = 'black'
+    }
+  }
+});
+
+  // 4 questao 
+
+  function fridayButton(friday){
+    let button = document.createElement('button')
+    // let buttonContainer = document.querySelector('.buttons-container')
+    button.innerHTML = friday
+    button.id = "btn-friday"
+    buttonContainer.appendChild(button);
+  }
+
+  fridayButton('Sexta-feira')
+
+  // 5 questao
+  // ajuda do grupo de estudos
+  let fridayB = document.querySelector('#btn-friday');
+
+  fridayB.addEventListener('click', function(){
+    let fridayCor = document.querySelectorAll('.friday')
+    let array = [4,11,18,25];
+
+    for (let index = 0; index < fridayCor.length; index += 1){
+      if (fridayCor[index].innerText === 'Sexta-feira'){
+        fridayCor[index].innerText = array[index];
+      } else { 
+        fridayCor[index].innerText = 'Sexta-feira'
+      }
+    }
+  });
+//  6 questao
