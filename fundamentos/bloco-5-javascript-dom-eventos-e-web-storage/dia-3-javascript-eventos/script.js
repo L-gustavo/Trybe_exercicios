@@ -87,3 +87,19 @@ createButton('Feriados')
     }
   });
 //  6 questao
+
+let days = document.querySelectorAll('.day');
+for (let index = 0; index < days.length; index += 1) {
+  days[index].addEventListener('mouseover', zoomDay)
+  days[index].addEventListener('mouseout', voltaSizeDay)
+}
+
+function zoomDay(event){
+  event.target.style.fontSize = '40px'
+}
+
+function voltaSizeDay(event){
+  event.target.style.fontSize = '20px'
+}
+
+// 7 questao
