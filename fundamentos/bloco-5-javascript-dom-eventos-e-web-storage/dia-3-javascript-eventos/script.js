@@ -121,8 +121,50 @@ function adicionaCor(cor){
   let div = document.createElement('div');
   div.innerHTML = "dia 13"
   div.className = 'task';
-  div.style.backgrounColor = cor;
+  div.style.backgroundColor = cor
   classElement.appendChild(div)
 }
 
-adicionaCor('blue')
+adicionaCor('blue');
+
+// 9 questão
+function divColor(){
+  let taskSelected = document.getElementsByClassName('task selected');
+  let myTask = document.querySelector('.task');
+  myTask.addEventListener('click', function(event){
+    if(taskSelected.length === 0){
+      event.target.className = 'task selected';
+    }
+    else{
+      event.target.className = 'task';
+    }
+  })
+}
+divColor();
+
+// 10 questao
+
+// setDayColor();
+function corLegendaTarefa(cor) {
+  let diaTarefa = document.querySelector('#days');
+  diaTarefa.addEventListener('click', function (event) {
+    event.target.style.color = cor;
+  });
+}
+corLegendaTarefa('red')
+// function setDayColor() {
+//   let selectedTask = document.getElementsByClassName('task selected');
+//   let days = document.querySelector('#days');
+//   let taskDiv = document.querySelector('.task');
+//   let taskColor = taskDiv.style.backgroundColor;
+  
+//   days.addEventListener('click', function(event){
+//     let eventTargetColor = event.target.style.color;
+//     if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+//       let color = selectedTask[0].style.backgroundColor;
+//       event.target.style.color = color;
+//     } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
+//       event.target.style.color = 'rgb(119,119,119)';
+//     }
+//   });
+// };
