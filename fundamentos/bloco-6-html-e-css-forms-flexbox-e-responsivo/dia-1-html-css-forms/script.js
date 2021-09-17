@@ -37,3 +37,9 @@ inputBota.addEventListener('click', function (event) {
   event.preventDefault();
   validacaoData();
 })
+
+
+function limparDiv() {
+  let bodyInput = document.querySelector('body');
+  bodyInput.removeChild('div')
+}
