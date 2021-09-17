@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+
+</head>
+<header class="container card-header">Preencher Forms</header>
+<body>
+  <main>
+    <form id="formulario" class="js-form-1">
+      <fieldset>
+        <div class="container">
+          <label  class="input-group-text" for="nome-input">Nome:</label>
+            <input type="text" class="form-control" data-validate-field="nome" name="nome" id="nome-input" maxlength="40" >
+        </div>
+        <div class="container">
+          <label  class="input-group-text" for="email-input">Email:</label>
+            <input type="text" class="form-control" data-validate-field="emai" name="email" id="email-input" maxlength="50" >
+        </div>
+        <div class="container">
+          <label  class="input-group-text" for="cpf-input">CPF:</label>
+            <input type="text" class="form-control" data-validate-field="cpf" name="CPF" id="cpf-input" maxlength="11" >
+        </div>
+        <div class="container">
+          <label  class="input-group-text" for="endereco-input">Endereco:</label>
+            <input type="text" class="form-control" data-validate-field="endereco" name="endereco" id="endereco-input" maxlength="200" >
+        </div>
+        <div class="container">
+          <label  class="input-group-text" for="cidade-input">Cidade:</label>
+            <input type="text" class="form-control" data-validate-field="cidade" name="cidade" id="cidade-input" maxlength="28" >
+        </div>
+        <div class="container">
+          <label  class="input-group-text" for="estado-select">Estado:</label>
+            <select name="estado" id="estado-select" >
+              <option >Selecione seu Estado</option>
+            </select>
+        </div>
+        <div class="container">
+          <label  class="input-group-text" for="casa">casa</label>
+            <input type="radio" name="tipoDeCasa" id="casa" value="casa" >
+          <label  class="input-group-text" for="apartamento">apartamento</label>  
+            <input type="radio" name="tipoDeCasa" id="apartamento" value="apartamento" checked >
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="container">
+          <label for="resumo">Resumo do currículo</label>
+          <textarea name="resumo" class="form-control" id="resumo" cols="50" rows="10" maxlength="1000" ></textarea>
+        </div>
+        <div class="container">
+          <label  class="input-group-text" for="cargo">Cargo</label>
+          <input type="text" data-validate-field="cargo" class="form-control" id="cargo" maxlength="40" >
+        </div>
+        <div class="container">
+          <label  class="input-group-text" for="descriçao">Descriçao do cargo</label>
+          <input type="text" data-validate-field="descriçao" class="form-control" id="descriçao" maxlength="500" >
+        </div>
+        <div class="container">
+          <label class="input-group-text" for="datepicker">Data de Início</label>
+          <input type="text" id="datepicker" placeholder="00/00/0000" autocomplete="none" name="data" >
+        </div>
+      </fieldset>
+      <div class="container">
+        <button class="btn btn-primary " type="reset" >Apagar</button>
+        <button class="btn btn-success " type="submit" name="envia" id="envia" >Enviar</button>
+      </div>
+    </form>
+  </main>
+
+<!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"  integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+
+  <script src="/node_modules/just-validate/dist/js/just-validate.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
