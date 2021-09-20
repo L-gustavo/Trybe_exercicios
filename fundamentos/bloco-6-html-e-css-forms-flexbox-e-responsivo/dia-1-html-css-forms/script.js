@@ -38,6 +38,11 @@ inputBota.addEventListener('click', function (event) {
   validacaoData();
 })
 
+// parte 3 usar o preventdefault()
+
+
+
+// part 4 remover tudo do form
 
 function limparDiv() {
   let bodyInput = document.querySelector('body');
