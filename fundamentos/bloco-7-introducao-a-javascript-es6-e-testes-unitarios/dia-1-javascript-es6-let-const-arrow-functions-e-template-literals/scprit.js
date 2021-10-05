@@ -36,4 +36,5 @@
 
 const fatorial = (num) => (num<2)? 1:fac(num-1)*num;
 
+console.log(fatorial(num));
 console.log(fatorial(num(4)));
