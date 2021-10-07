@@ -1,3 +1,4 @@
+// 1 questao
 const contratado = (nomeCompleto) => {
   let nome = nomeCompleto.toLowerCase().split(' ');
   return { nome: nomeCompleto, email: `${nome.join('_')}@trybe.com`}
@@ -14,3 +15,15 @@ const contratado = (nomeCompleto) => {
   };
   
   console.log(newEmployees(contratado)); 
+
+//  2 questão 
+const sorteio = (numeroEscolhido) => {
+  let numeroSorteado = Math.round(Math.random() * 5) + 1;
+  console.log(numeroSorteado);
+  const resultado = confereNumero(numeroEscolhido, numeroSorteado);
+  return resultado
+  }
+  
+  const confereNumero = (numeroEscolhido, numero) => (numero === numeroEscolhido) ? "Parabéns você ganhou" : "Tente novamente";
+  
+  console.log(sorteio(5)); 
