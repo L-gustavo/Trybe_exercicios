@@ -9,3 +9,10 @@ const arrays = [
 function flatten() {
   return arrays.reduce((acc, array) => acc.concat(array), []);
 }
+
+
+// const arrayNumber = arrays.reduce((acc, current) => {
+//   return [`${acc} ${current}`];
+// });
+
+// console.log(arrayNumber);
