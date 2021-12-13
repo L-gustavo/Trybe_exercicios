@@ -16,3 +16,15 @@ it("utilizando o mock, crie uma nova implementação, que deve receber dois par�
   expect(service.numberAltr).toHaveBeenCalledTimes(1);
   expect(service.numberAltr).toHaveBeenCalledWith(10, 2);
 })
+
+describe("testes de implementações", () => {
+  it("Utilize o mock e desenvolva uma nova implementação que receba três parâmetros", () => {
+    service.numberAltr = jest.fn().mockImplementationOnce((a, b, c) => a * b * c);
+  
+    expect(service.numberAltr(1, 2, 3)).toBe(6);
+    expect(service.numberAltr).toHaveBeenCalled();
+    expect(service.numberAltr).toHaveBeenCalledTimes(1);
+    expect(service.numberAltr).toHaveBeenCalledWith(1, 2, 3);
+    
+  })
+})
