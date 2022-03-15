@@ -15,6 +15,18 @@ function numbers(num1, num2, num3) {
   })
 }
 
-numbers(4,7,"b")
+// numbers(4,7,"b")
+//   .then(resolve => console.log(resolve))
+//   .catch(error => console.error(error));
+
+
+
+const randomNumber = () => Math.floor(Math.random() * 100 + 1);
+
+const number1 = randomNumber();
+const number2 = randomNumber();
+const number3 = randomNumber();
+
+numbers(number1, number2, number3)
   .then(resolve => console.log(resolve))
-  .catch(error => console.error(error))
+  .catch(error => console.error(error));
