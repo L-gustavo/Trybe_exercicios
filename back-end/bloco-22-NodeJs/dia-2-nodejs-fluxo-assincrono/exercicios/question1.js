@@ -27,6 +27,14 @@ const number1 = randomNumber();
 const number2 = randomNumber();
 const number3 = randomNumber();
 
-numbers(number1, number2, number3)
-  .then(resolve => console.log(resolve))
-  .catch(error => console.error(error));
+// numbers(number1, number2, number3)
+//   .then(resolve => console.log(resolve))
+//   .catch(error => console.error(error.message));
+async function getRandomNumbers() {
+  try {
+    const result = await numbers(number1, number2, number3)
+      console.log(resolve)
+    } catch (error) {
+      console.error(error);
+  }
+}
