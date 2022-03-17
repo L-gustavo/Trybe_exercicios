@@ -34,7 +34,7 @@ async function getRandomNumbers() {
   try {
     const result = await numbers(number1, number2, number3)
       console.log(resolve)
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      console.error(err);
   }
 }
