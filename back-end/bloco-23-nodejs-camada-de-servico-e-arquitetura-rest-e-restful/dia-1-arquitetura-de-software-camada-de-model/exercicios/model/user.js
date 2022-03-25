@@ -30,10 +30,34 @@ const getById = async (id) => {
   return users;
 };
 
+const putById = async ({ id, firstName, lastName, email, password }) => {
+  await connection.execute(
+    `UPDATE users_crud.users SET
+    first_name=?, last_name=?, email=?, password=?
+    WHERE id=?;`,
+    [firstName, lastName, email, password, id]
+  )
 
+  return {
+    id,
+    firstName,
+    lastName,
+    email,
+    password,
+  }
+};
+
+const deleteUser = async (id) => {
+  await connection.execute(
+    'DELETE FROM users_crud.users WHERE id=?;',
+    [id]
+  )
+};
 
 module.exports = {
 	create,
   getAll,
   getById,
+  putById,
+  deleteUser,
 }
